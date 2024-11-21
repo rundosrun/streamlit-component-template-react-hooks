@@ -1,0 +1,15 @@
+.tui-image-editor-controls {
+  display: none !important;
+}
+
+.tui-image-editor-container {
+  background: transparent;
+}
+
+.tui-image-editor-header-logo {
+  display: none;
+}
+
+.tui-image-editor-help-menu {
+  display: none !important;
+}
