@@ -56,9 +56,9 @@ const ImageEditor: FC<ImageEditorProps> = (props) => {
 export default function App() {
   const renderData = useRenderData()
 
-  const imagePath: string = renderData.args["imagePath"]
-  const width: string | number = renderData.args["width"] || "100%"
-  const height: string | number = renderData.args["height"] || "900px"
+  const imagePath = renderData.args["imagePath"]
+  const width = renderData.args["width"] || "100%"
+  const height = renderData.args["height"] || "900px"
 
   const props: ImageEditorProps = {
     includeUI: {
