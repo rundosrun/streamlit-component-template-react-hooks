@@ -23,12 +23,12 @@ interface ImageEditorProps {
     }
     menuBarPosition: string
   }
-  cssMaxWidth: number
-  cssMaxHeight: number
-  selectionStyle: {
-    cornerSize: number
-    rotatingPointOffset: number
-  }
+  // cssMaxWidth: number
+  // cssMaxHeight: number
+  // selectionStyle: {
+  //   cornerSize: number
+  //   rotatingPointOffset: number
+  // }
 }
 
 const ImageEditor: FC<ImageEditorProps> = (props) => {
@@ -57,6 +57,8 @@ export default function App() {
   const renderData = useRenderData()
 
   const imagePath = renderData.args["imagePath"]
+  const width = renderData.args["width"] || "100%"
+  const height = renderData.args["height"] || "900px"
 
   const props: ImageEditorProps = {
     includeUI: {
@@ -69,16 +71,16 @@ export default function App() {
       initMenu: "text",
       menuBarPosition: "bottom",
       uiSize: {
-        width: "100%",
-        height: "900px",
+        width,
+        height,
       },
     },
-    cssMaxWidth: 700,
-    cssMaxHeight: 500,
-    selectionStyle: {
-      cornerSize: 20,
-      rotatingPointOffset: 70,
-    },
+    // cssMaxWidth: 700,
+    // cssMaxHeight: 500,
+    // selectionStyle: {
+    //   cornerSize: 20,
+    //   rotatingPointOffset: 70,
+    // },
   }
 
   return (
